@@ -10,7 +10,10 @@ public final class App {
         // list.example02();
         // HashMapExample map = new HashMapExample();
         // map.example();
-        ConcurrentHashMapExample conMap = new ConcurrentHashMapExample();
-        conMap.example();
+        // ConcurrentHashMapExample conMap = new ConcurrentHashMapExample();
+        // conMap.example();
+
+        LinkedListExample ll = new LinkedListExample();
+        ll.example();
     }
 }
