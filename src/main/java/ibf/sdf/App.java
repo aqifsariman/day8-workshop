@@ -8,5 +8,9 @@ public final class App {
         CollectionSortExample list = new CollectionSortExample();
         list.example01();
         list.example02();
+        // HashMapExample map = new HashMapExample();
+        // map.example();
+        ConcurrentHashMapExample conMap = new ConcurrentHashMapExample();
+        conMap.example();
     }
 }
