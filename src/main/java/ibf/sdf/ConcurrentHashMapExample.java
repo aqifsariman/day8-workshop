@@ -1,7 +1,6 @@
 package ibf.sdf;
 
 import java.io.Console;
-import java.util.Enumeration;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -15,17 +14,23 @@ public class ConcurrentHashMapExample {
         laptops.put("Dell".toLowerCase(), 20);
         laptops.put("Lenovo".toLowerCase(), 30);
         laptops.put("Huawei".toLowerCase(), 25);
-        System.out.println("Total laptops: " + laptops.size());
+        // System.out.println("Total laptops: " + laptops.size());
 
         for (String key : laptops.keySet()) {
             System.out.println(key + " - " + laptops.get(key));
         }
 
         // ANOTHER TYPE OF ITERATOR
-        Enumeration<Integer> elems = ((ConcurrentHashMap<String, Integer>) laptops).elements();
-        while (elems.hasMoreElements()) {
-            System.out.println(elems.nextElement());
+        // Enumeration<Integer> elems = ((ConcurrentHashMap<String, Integer>)
+        // laptops).elements();
+
+        Integer value = laptops.putIfAbsent("acer", 25);
+        if (value != null) {
+            System.out.println("Item found: " + value);
         }
+        // while (elems.hasMoreElements()) {
+        // System.out.println(elems.nextElement());
+        // }
 
         String searchString = "";
         Console con = System.console();
